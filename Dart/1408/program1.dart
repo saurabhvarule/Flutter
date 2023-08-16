@@ -4,7 +4,7 @@ void main() {
 
 
 /*
-a dart code can be compile in five ways dart has five comilers which are used for different purposes.
+a dart code can be compile in five ways dart has five compilers which are used for different purposes.
                                                                   | file extensions | 
 1.aot-snapshot - compile dart to an AOT (ahead of time) snapshot. -->> .aot
 2.exe          - compile dart to a self-contained executable.     -->> .exe
