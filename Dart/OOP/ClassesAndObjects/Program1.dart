@@ -7,7 +7,6 @@ class Company {
     print(empCount);
   }
 }
-
 void main() {
   Company obj1 = new Company();
   obj1.info();

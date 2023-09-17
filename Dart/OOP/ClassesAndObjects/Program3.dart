@@ -15,8 +15,8 @@ void main() {
   //obj1.y = 30;    // -->> error
   new Demo().info();
   print(obj1.runtimeType); // Demo
-  Demo.y = 40;
   obj1.x = 30;
+  Demo.y = 40;
   obj1.info();
   obj2.info();
 }

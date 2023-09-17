@@ -1,3 +1,4 @@
+
 import 'dart:io';
 
 void main() {
@@ -15,3 +16,6 @@ void main() {
 
   stdout.writeln("Name :$name Age :$age Salary : $sal");
 }
+
+
+// the above code explains that how values are taken from user 
