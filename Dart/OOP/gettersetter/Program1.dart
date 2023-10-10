@@ -23,8 +23,10 @@ void main() {
   print(obj1._x);
   print(obj1.y);
   obj1.info();
+
   Demo2 obj2 = new Demo2();
   obj2.m1();
 }
 
 // private variables are initialized as '_' by deafault they are public
+// the scope og private variables are limited within file in dart.
