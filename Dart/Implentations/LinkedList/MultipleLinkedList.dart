@@ -74,6 +74,7 @@ Node? addLast(Node? head) {
 Node? addAtPosition(Node? head, int pos) {
   if (pos <= 0 || pos > count + 1) {
     print("Invalid Position");
+    return head;
   } else {
     if (pos == 1) {
       head = addFirst(head);
