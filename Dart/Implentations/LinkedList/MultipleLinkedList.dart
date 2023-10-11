@@ -51,7 +51,7 @@ int printData(Node? head) {
 }
 
 // 4. function addFirst() :
-int addFirst(Node? head) {
+Node? addFirst(Node? head) {
   Node? newNode = createNode();
   if (head == null) {
     head = newNode;
@@ -61,25 +61,24 @@ int addFirst(Node? head) {
   }
   print("Added Successfully");
 
-  return 0;
+  return head;
 }
 
 //5. function addLast() :
-int addLast(Node? head) {
-  addNode(head);
-  return 0;
+Node? addLast(Node? head) {
+  head = addNode(head);
+  return head;
 }
 
 // 6.function addAtPosition() :
-int addAtPosition(Node? head, int pos) {
+Node? addAtPosition(Node? head, int pos) {
   if (pos <= 0 || pos > count + 1) {
     print("Invalid Position");
-    return -1;
   } else {
     if (pos == 1) {
-      addFirst(head);
+      head = addFirst(head);
     } else if (pos == count + 1) {
-      addLast(head);
+      head = addLast(head);
     } else {
       Node? newNode = createNode();
       Node? temp = head;
@@ -92,27 +91,27 @@ int addAtPosition(Node? head, int pos) {
       print("Added Successfully");
     }
   }
-  return 0;
+  return head;
 }
 
 // 7.function deleteFirst() :
-int deleteFirst(Node? head) {
+Node? deleteFirst(Node? head) {
   if (head == null) {
     print("Linked List Epty!!");
-    return -1;
+    return head;
   }
   head = head.next;
   count--;
   print("Deleted Successfully");
-  return 0;
+  return head;
 }
 
 // 8.deleteLast function() :
-int deleteLast(Node? head) {
+Node? deleteLast(Node? head) {
   Node? temp = head;
   if (head == null) {
     print("Linked List Empty");
-    return -1;
+    return head;
   }
   while (temp?.next?.next != null) {
     temp = temp?.next;
@@ -120,21 +119,21 @@ int deleteLast(Node? head) {
   temp?.next = null;
   print("Deleted Successfully");
   count--;
-  return 0;
+  return head;
 }
 
 // 9.delete at position ():
-int deleteAtPos(Node? head, int pos) {
+Node? deleteAtPos(Node? head, int pos) {
   if (pos <= 0 || pos > count) {
     print("Invlalid Position");
-    return -1;
+    return head; 
   } else {
     if (pos == 1) {
       // if position equal to then we are directly calling deleteFirst function which is alreay written
-      deleteFirst(head);
+      head = deleteFirst(head);
     } else if (pos == count) {
       // if posion is euqal to node count then we are directly calling deleteLast function which is already written
-      deleteLast(head);
+      head = deleteLast(head);
     } else {
       // delete at postion code :
       Node? temp = head;
@@ -147,11 +146,12 @@ int deleteAtPos(Node? head, int pos) {
       print("Deleted Successfully");
     }
   }
-  return 0;
+  return head;
 }
 
 //Main function :
 void main() {
+  // linked list 1:
   Node? ll1 = null;
   int x = 3;
   while (x > 0) {
@@ -159,6 +159,8 @@ void main() {
     x--;
   }
   x = 3;
+  
+  // linked list 2:
   Node? ll2 = null;
   while (x > 0) {
     ll2 = addNode(ll2); // call to addNode function
@@ -169,4 +171,7 @@ void main() {
 
   stdout.write("Linked list 2:");
   printData(ll1);
+  ll1 = deleteLast(ll1);
+  printData(ll1);
+
 }
