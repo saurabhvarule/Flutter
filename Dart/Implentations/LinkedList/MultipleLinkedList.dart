@@ -36,7 +36,7 @@ Node? addNode(Node? head) {
 }
 
 // 3.function printData() :
-int printData(Node? head) {
+int printLL(Node? head) {
   if (head == null) {
     print("Linked list empty");
     return -1;
@@ -168,11 +168,11 @@ void main() {
     x--;
   }
   stdout.write("Linked list 1:");
-  printData(ll1);
+  printLL(ll1);
 
   stdout.write("Linked list 2:");
-  printData(ll1);
+  printLL(ll1);
   ll1 = deleteLast(ll1);
-  printData(ll1);
+  printLL(ll1);
 
 }
