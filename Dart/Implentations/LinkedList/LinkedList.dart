@@ -6,10 +6,13 @@ class Node {
   int? data;
   Node? next;
 }
+
 // head pointer :
 Node? head = null;
+
 // node count :
 int count = 0;
+
 // 1.function createNode() :
 Node? createNode(int data) {
   Node? newNode = new Node();
