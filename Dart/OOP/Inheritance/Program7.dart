@@ -8,7 +8,6 @@ class Company {
     print(location);
   }
 }
-
 class Employee extends Company {
   String? empName;
   int? empId;
@@ -21,7 +20,6 @@ class Employee extends Company {
     print(sal);
   }
 }
-
 void main() {
   Employee obj = new Employee("Vedika", 10, 4.5, "_VOIS", "Kharadi");
   obj.compInfo();
