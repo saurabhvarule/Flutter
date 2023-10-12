@@ -52,4 +52,6 @@ void main() {
 
   Node? linkedList3 = merge(linkedList1, linkedList2);
   printLL(linkedList3);
+
+  print("End main");
 }
