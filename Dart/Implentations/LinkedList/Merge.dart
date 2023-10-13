@@ -4,13 +4,10 @@ import 'MultipleLinkedList.dart';
 
 Node? merge(Node? linkedList1, Node? linkedList2) {
   Node? linkedList3 = linkedList1;
-  Node? temp1 = linkedList1;
-  Node? temp2 = linkedList2;
   Node? temp3 = linkedList3;
-
-  Node? container1 = temp1?.next;
-  Node? container2 = temp2?.next;
-  temp3?.next = temp2;
+  Node? container1 = linkedList1?.next;
+  Node? container2 = linkedList2?.next;
+  temp3?.next = linkedList2;
   temp3 = temp3?.next;
   while (temp3?.next != null) {
     temp3?.next = container1;
@@ -19,10 +16,10 @@ Node? merge(Node? linkedList1, Node? linkedList2) {
     container2 = container2?.next;
     temp3 = temp3?.next?.next;
 
-    if (container1?.next == null) {
+    if (container1 == null) {
       temp3?.next = container2;
       return linkedList3;
-    } else if (container2?.next == null) {
+    } else if (container2 == null) {
       temp3?.next = container1;
       return linkedList3;
     }
