@@ -24,7 +24,7 @@ class _MyLoginState extends State<MyLogin> {
               padding: EdgeInsets.only(left: 35, top: 130),
               child: Text(
                 'Welcome\nKindly login',
-                style: TextStyle(color: Colors.white, fontSize: 33),
+                style: TextStyle(color: Colors.white, fontSize: 39),
               ),
             ),
             SingleChildScrollView(
@@ -68,10 +68,13 @@ class _MyLoginState extends State<MyLogin> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              Text(                   
                                 'Sign in',
                                 style: TextStyle(
-                                    fontSize: 27, fontWeight: FontWeight.w700),
+                                    fontSize: 27,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white),
+
                               ),
                               CircleAvatar(
                                 radius: 30,
